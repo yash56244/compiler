@@ -36,7 +36,7 @@
 		{% endif %}
 		<div id="inputcode">
 			<h3>Editor</h3>
-			<textarea rows="50" cols="100" name="prog" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">{{ prog }}</textarea>
+			<textarea rows="50" cols="100" name="prog" spellcheck="false" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">{{ prog }}</textarea>
 		</div>
 		<div id="inputs">
 			<h3>Input</h3>
