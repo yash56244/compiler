@@ -19,7 +19,7 @@ def compile():
             return render_template("template.html",languages=languages,current_lang=language,prog=language1['prog'],input=language1['input'],remarks=remark,output=outputs)
         elif language == "C":
             open("code.c",'w').write(language1['prog'])
-            os.system("gcc code.c -o code /usr/lib/ 1> output.file 2> remarks.file")
+            os.system("gcc code.c -o code /usr/lib/x86_64-linux-gnu/libc_nonshared.a 1> output.file 2> remarks.file")
             open("input.file",'w').write(language1['input'])
             os.system("code.exe < input.file 1>> output.file 2>> remarks.file")
             remark = open("remarks.file",'r').read()
