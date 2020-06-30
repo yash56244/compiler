@@ -42,12 +42,6 @@ def compile():
             remark = open("remarks.file",'r').read()
             outputs = open("output.file",'r').read()
             os.system("del code* *.file")
-<<<<<<< HEAD
             return render_template("index.html",languages=languages,current_lang=language,prog=language1['prog'],input=language1['input'],remarks=remark,output=outputs)
         return render_template('index.html',languages=languages,current_lang='',prog='',input='',remarks='',output='')
     return render_template('index.html',languages=languages,current_lang='',prog='',input='',remarks='',output='')
-=======
-            return render_template("template.html",languages=languages,current_lang=language,prog=language1['prog'],input=language1['input'],remarks=remark,output=outputs)
-        return render_template('template.html',languages=languages,current_lang='',prog='',input='',remarks='',output='')
-    return render_template('template.html',languages=languages,current_lang='',prog='',input='',remarks='',output='')
->>>>>>> 6fc9648eb977cc33c9f9975a313ea8fc261cbe6f
