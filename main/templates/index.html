@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Compiler</title>
+		<link rel="stylesheet" href="../static/css/style.css">
+	</head>
+
+	<body >
+		<form id="userinput" action="/" method="POST">
+			<div class="select">
+				<span style="font-size: 28px;">Language : </span>
+				<select name ="languages">
+					{% for language in languages %}
+						<option value="{{language}}">{{language}}</option>
+					{% endfor %}
+				</select>
+				<span style="font-size: 26px; float: right;">Made By - <a href="https://github.com/yash56244" id="link" target="_blank"> Yash Chaudhari</a></span>
+			</div>
+		{% if current_lang != '' %}
+		<script> document.getElementsByName('languages')[0].value = "{{current_lang}}"; </script>
+		{% endif %}
+		<div class="grid-container">
+		<div class="grid-item">
+		<div id="inputcode">
+			<h3>Editor
+				<input type="submit" value="Submit" class="submit">
+			</h3>
+			<textarea rows="20" cols="50" name="prog" spellcheck="false" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">{{ prog }}</textarea>
+		</div>
+		</div>
+		<div class="grid-item">
+		<div id="inputs">
+			<h3>Input</h3>
+			<textarea rows="3" cols="50" name="input">{{ input }}</textarea><br>
+		</div>
+		<div id="remarks">
+			<h3>Remarks</h3>
+			<textarea rows="3" cols="50" name="remark" readonly style="cursor: auto;">{{ remarks }}</textarea><br>
+		</div>
+		<div id="output">
+			<h3>Output</h3>
+			<textarea rows="3" cols="50" name="output" readonly style="cursor: auto;">{{ output }}</textarea>
+		<br></div><br>
+		</div>
+		</div>
+		</form>
+	</body>
+</html>
